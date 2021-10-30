@@ -1,0 +1,651 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+div {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+input, button {
+    outline: none;
+    border: none;
+}
+.container {
+    max-width: 1256px;
+    margin: auto;
+}
+.start {
+    background: url(../img/start.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.start .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 45px;
+}
+.start-right form {
+    max-width: 503px;
+    background: #131313;
+    padding: 28px 39px 28px 56px;
+}
+.start-form__title {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+.start-right form > p {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.start-right form > input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 48px;
+    color: #fff;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+.checkbox {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	margin: 10px 0 0 20px;
+}
+.checkbox + label {
+	position: relative;
+	padding: 0 0 0 25px;
+	cursor: pointer;
+}
+.checkbox + label:before {
+	content: '';
+	position: absolute;
+    top: -1px;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	background: #dfe4ed
+;
+    border-radius: 1px;
+}
+.checkbox + label:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: 1px;
+	width: 16px;
+	height: 16px;
+}
+.checkbox:checked + label:before {
+    background: #E3B873;
+}
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    content: "";
+    position: absolute;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+input[type="checkbox"]:checked + label:after, 
+input[type="checkbox"]:not(:checked) + label:after {
+    left: 3px;
+    top: 3px;
+    width: 9px;
+    height: 4px;
+    border-radius: 1px;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.agree-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    color: #FFFFFF;
+    margin-left: 8px;
+}
+.agree {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.start-form__btn {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+
+    width: 213px;
+    height: 51px;
+    margin-left: auto;
+    display: block;
+    margin-top: 39px;
+}
+.start-left { 
+    max-width: 400px;
+    margin-right: 100px;
+    padding-bottom: 90px;
+}
+.start-left__card {
+    display: flex;
+    align-items: center;
+}
+.start-left__card {
+    margin-bottom: 90px;
+}
+.start-left__card div {
+    width: 61px;
+    height: 61px;
+    background-color: #E3B873;
+    border: 10px solid #FFF;
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.piggy-cash {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+.piggy-img {
+    width: 72px;
+    height: 72px;
+    background-color: #E3B873;
+    border-radius: 50%;
+    text-align: center;
+}
+.piggy-img img {
+    text-align: center;
+    margin-top: 17px;
+}
+.piggy-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #E3B873;
+}
+.start-left-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #363636;
+    margin-left: 21px;
+}
+.client {
+    background: url(../img/client-bg.jpg) bottom repeat-x;
+    padding-bottom: 354px;
+    padding-top: 71px;
+}
+.client .container {
+    max-width: 1400px;
+}
+.client-box-title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 31px;
+}
+.client-title {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #181818;
+    margin-bottom: 13px;
+}
+.client-box-title > p {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+    color: #363636;
+    margin-top: 24px;
+}
+.client-card-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.client-card {
+    max-width: 428px;
+}
+.client-card-main {
+    width: 100%;
+    padding: 24px 32px 90px 20px;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.04);
+    background: #FFFFFF;
+}
+.client-card-title {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 23px;
+}
+.client-photo {
+    width: 72px;
+    height: 72px;
+}
+.client-photo img {
+    width: inherit;
+    border-radius: 50%;
+}
+.client-name {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #181818;
+    margin-left: 20px;
+}
+.client-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 180%;
+    color: #959595;
+}
+.client-bottom {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5);
+    position: relative;
+    top: -27px;
+}
+.client-size, .client-time {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #E3B873;
+    align-items: center;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+.client-size {
+    margin-right: 1px;
+}
+.bottom-text {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.form {
+    max-width: 520px;
+    background: #131313;
+    position: relative;
+    top: -241px;
+    padding: 34px 184px 34px 184px;
+    margin: auto;
+}
+.quest-form {
+    max-width: 516px;
+    margin: auto;
+}
+.quest-form-title {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 45px;
+}
+.quest-form-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+.quest-form-left, .quest-form-right {
+    width: 45%;
+}
+.form p {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 7px;
+}
+.quest-form-top input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 48px;
+    color: #FFFFFF;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+.form input {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    background: transparent;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 48px;
+    color: #FFFFFF;
+    padding-bottom: 8px;
+}
+.quest-check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.quest-check input {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+    background: #E3B873;
+    border-radius: 1px;
+}
+.quest-check-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 163.68%;
+    color: #FFFFFF;
+}
+.quest-btn {
+    display: block;
+    width: 200px;
+    height: 51px;
+    background: #E3B873;
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.1);
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: auto;
+}
+.maps {
+    width: 100%;
+    position: relative; 
+    top: -512px;
+    z-index: -1;
+    background: url('../img/Step3 (Copy)/image 7.2.png'), linear-gradient(180deg, rgba(0, 0, 0, 1) 3.47%, rgba(0, 0, 0, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 300px;
+    padding-bottom: 80px;
+    margin: auto;
+}
+.maps-title {
+    font-family: Yeseva One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin-bottom: 20px;
+}
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.email, .instagram {
+    width: 28px;
+    height: 28px;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: #E3B873;
+    text-align: center;
+}
+.social img {
+    width: 14px;
+    margin-top: 27%;
+}
+.instagram {
+    margin-left: 15px;
+}
+.instagram img {
+    margin-top: 20%;
+}
+.yandex-map {
+    max-width: 883px;
+    margin: auto;
+}
+footer {
+    width: 100%;
+    background: #181818;
+    margin-top: -517px;
+    padding-top: 61px;
+    padding-bottom: 62px;
+}
+footer .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-text {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #E3B873;
+    margin-right: 100px;
+}
+.nav-el {
+    display: flex;
+    justify-content: space-between;
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    list-style: none;
+}
+.nav-el a {
+    margin-right: 47px;
+    color: #FFFFFF;
+}
+.footer-num > a {
+    font-family: Nunito Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #E3B873;
+}
+.nav-el span {
+    color: #E3B873;
+}
+.footer-btn {
+    width: 161px;
+    height: 37px;
+    background: #E3B873;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    border-radius: 2px;
+    text-align: center;
+}
+.footer-btn__text {
+    font-family: Nunito Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+@media (max-width: 1280px) {
+    .client-card-box {
+        justify-content: start;
+    }
+    .client-card {
+        margin-left: 5%;
+    }
+}
+@media (max-width: 1024px) {
+    .footer-text, .footer-nav, .footer-num {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+    .nav-el {
+        justify-content: center;
+    }
+    .start {
+        background-size: auto;
+    }
+}
+@media (max-width: 768px) {
+    .client-card {
+        margin: auto;
+    }
+    .start-right {
+        width: 100%;
+    }
+    .start-right form {
+        margin: auto;
+    }
+    .form, .yandex-map {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+@media (max-width: 575px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    .start-left {
+        margin-right: 0;
+        padding-bottom: 0;
+    }
+    .start-left__card div {
+        min-width: 61px;
+    }
+    .client-card-title {
+        width: 100%;
+    }
+    .client-card-box {
+        justify-content: space-around;
+    }
+    .client-card {
+        margin-left: 0;
+    }
+    .piggy-img {
+        width: 55px;
+        height: 55px;
+    }
+    .piggy-img img {
+        margin-top: 10px;
+    }
+    .form {
+        width: 90%;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: auto;
+    }
+    .form .container {
+        width: 80%;
+    }
+    .quest-form-top {
+        display: block;
+        margin-bottom: 0;
+    }
+    .quest-form-left, .quest-form-right {
+        width: 100%;
+    }
+    .footer-text, .footer-nav, .footer-num {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .nav-el {
+        display: block;
+    }
+    .nav-el a {
+        margin-right: 0;
+    }
+    .nav-el li {
+        margin-bottom: 5px;
+    }
+}
